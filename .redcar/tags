@@ -1,7 +1,9 @@
-1316564651
+1316565988
 Application	/home/student/Class/rails_projects/sample_app/config/application.rb	  class Application 
 ApplicationController	/home/student/Class/rails_projects/sample_app/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/student/Class/rails_projects/sample_app/app/helpers/application_helper.rb	module ApplicationHelper
+PagesController	/home/student/Class/rails_projects/sample_app/app/controllers/pages_controller.rb	class PagesController 
+PagesHelper	/home/student/Class/rails_projects/sample_app/app/helpers/pages_helper.rb	module PagesHelper
 SampleApp	/home/student/Class/rails_projects/sample_app/config/application.rb	module SampleApp
 Str	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function Str(key, holder, stack)
 Type	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function Type(o)
@@ -27,6 +29,7 @@ clone	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype
 collect	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function collect(iterator, context)
 compact	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function compact()
 concat	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function concat()
+contact	/home/student/Class/rails_projects/sample_app/app/controllers/pages_controller.rb	  def contact
 copy	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function copy(methods, destination, onlyIfAbsent)
 create	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function create()
 cssNameFor	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function cssNameFor(key)
@@ -75,6 +78,7 @@ grep	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.
 gsub	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function gsub(pattern, replacement)
 handleMethod	/home/student/Class/rails_projects/sample_app/public/javascripts/rails.js	function handleMethod(element)
 handleRemote	/home/student/Class/rails_projects/sample_app/public/javascripts/rails.js	function handleRemote(element)
+home	/home/student/Class/rails_projects/sample_app/app/controllers/pages_controller.rb	  def home
 inGroupsOf	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function inGroupsOf(number, fillWith)
 include	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function include(object)
 include	/home/student/Class/rails_projects/sample_app/public/javascripts/prototype.js	function include(pattern)
