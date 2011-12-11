@@ -63,12 +63,42 @@ describe UsersController do
       response.should have_selector("h1>img", :class => "gravatar")
     end
     
+    it "should say have the correct pluralization" do
+      mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+      get :show, :id => @user
+      response.should have_selector("strong", :content => 'Micropost')
+    end
+    
+     it "should say have the correct pluralization" do
+      mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+      mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
+      get :show, :id => @user
+      response.should have_selector("strong", :content => 'Microposts')
+    end
+    
     it "should show the user's microposts" do
       mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
       mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
       get :show, :id => @user
       response.should have_selector("span.content", :content => mp1.content)
       response.should have_selector("span.content", :content => mp2.content)
+    end
+    describe "Micropost access" do
+      before(:each) do
+        @otheruser = Factory(:user, :name => "Bob", :email => "another@example.com")
+        Factory(:micropost, :user => @user, :content => "Foo bar")
+        test_sign_in(@user)
+      end
+        
+      it "should show a delete link on owner's microposts" do
+        get :show, :id => @user
+        response.should have_selector("a", :content => 'delete')
+      end
+      
+      it "should not show a delete link on owner's microposts" do
+        get :show, :id => @otheruser
+        response.should_not have_selector("a", :content => 'delete')
+      end
     end
   end
   
